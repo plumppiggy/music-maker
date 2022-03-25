@@ -2,6 +2,7 @@ import { useState } from "react";
 import Success2 from "./components/Success2";
 import Dashboard from "./Dashboard";
 import { playlistUrl } from "./UrlForm";
+import React, { Component }  from 'react';
 
 const initialFormData = Object.freeze({
     Playlist_URL: "",
@@ -28,7 +29,7 @@ const FooBarForm = ({ spotifyApi }) => {
 
         try {
             const createPlaylistRes = await spotifyApi.createPlaylist("Recommended Songs Playlist", {
-                description: "Recommended Songs",
+                description: `Playlist Similar to ${playlistUrl}`,
                 public: false,
             });
 

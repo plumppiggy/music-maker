@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React, { Component }  from 'react';
 import Success from "./components/Success";
 import Dashboard from "./Dashboard";
 import "./Dashboard.css";
@@ -28,7 +29,7 @@ const FooBarForm = ({ spotifyApi }) => {
 
     try {
       const createPlaylistRes = await spotifyApi.createPlaylist("Musi Mover Playlist", {
-        description: `Copied Playlist from ${playlistId}`,
+        description: `Copied Playlist from ${playlistUrl}`,
         public: false,
       });
 

@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
+import { ReactDOM } from 'react-dom';
 import { useState } from "react";
 import useAuth from "./spotify-auth/client/UseAuth";
 import SpotifyWebApi from "spotify-web-api-node";
 import "./Dashboard.css";
 import UrlForm from "./UrlForm";
 import UrlForm2 from "./UrlForm2.js";
+import UrlForm3 from "./Urlform3";
 
 // Setting the spotifyApi, so that we can use it's functions
 const spotifyApi = new SpotifyWebApi({
@@ -27,6 +29,9 @@ const Dashboard = ({ code }) => {
 		});
 	}, [accessToken]);
 
+
+
+
 	return (
 		[	
 		<head>
@@ -43,6 +48,10 @@ const Dashboard = ({ code }) => {
 			<h1>You have successfully logged in, choose an option below</h1>
 			<UrlForm spotifyApi={spotifyApi}/>
 			<UrlForm2 spotifyApi={spotifyApi}/>
+			<UrlForm3 spotifyApi={spotifyApi}/>
+		</div>,
+		<div className="user-state">
+			<h1>Info about User</h1>
 		</div>
 		</body>
 		]

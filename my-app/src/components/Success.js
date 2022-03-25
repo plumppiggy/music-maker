@@ -1,22 +1,4 @@
-
-// function Success() {
-
-//     return (
-
-//         <div>
-//             <p>
-//                 Success :) You can now view your playlist in your spotify library!
-//                 Would you like to copy another playlist?
-//             </p>
-//             <nav>
-//                 <Link to="../Dashboard">Home</Link> |{" "}
-//             </nav>
-//         </div>
-
-
-//     );
-// }
-
+import React, { Component }  from 'react';
 
 function Success() {
 

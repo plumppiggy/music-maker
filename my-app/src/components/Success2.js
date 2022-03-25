@@ -1,4 +1,5 @@
 import '../Dashboard.css'
+import React, { Component }  from 'react';
 
 function Success2() {
     return (
