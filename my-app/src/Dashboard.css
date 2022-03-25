@@ -1,4 +1,5 @@
 .get-playlist{
+    overflow: hidden;
     padding-top: 15vmin;
     padding-right: 10vmin;
     padding-left: 10vmin;
@@ -6,3 +7,85 @@
     background-color: #B19DFF;
     min-height: 100vh;
 }
+
+.btn-group {
+    overflow: hidden;
+    border : 1px;
+    padding: 10px 24px;
+    text-align: center;
+    color: #B19DFF;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font: 20px Roboto, serif;
+    float: right;
+}
+
+.btn-group:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display : table;
+}
+
+.btn-group:hover {
+    background-color: #b19d43;
+    color: white;
+}
+
+.input {
+    overflow: hidden;
+    text-align: center;
+    width: 50%;
+    padding: 10px 24px;
+    margin: 4px;
+    border : 1px #b19d43;
+    border-radius: 8px;
+    cursor: pointer;
+    font: 20px Roboto, serif;
+    display: left;
+}
+
+.labela {
+    color: white;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #b19d43;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    font: 25px Roboto, serif;
+
+}
+
+.responses {
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    font: 20px Roboto, serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #b19d43;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #B19DFF;
+    color: white;
+}
+

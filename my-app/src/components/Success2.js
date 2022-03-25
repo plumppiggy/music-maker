@@ -1,6 +1,8 @@
+import '../Dashboard.css'
+
 function Success2() {
     return (
-    <div>
+    <div className='responses'>
         Hope you enjoy your new playlist!
     </div>);
  }

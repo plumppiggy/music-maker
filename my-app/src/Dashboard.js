@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
 import useAuth from "./spotify-auth/client/UseAuth";
 import SpotifyWebApi from "spotify-web-api-node";
 import "./Dashboard.css";
@@ -9,6 +10,7 @@ import UrlForm2 from "./UrlForm2.js";
 const spotifyApi = new SpotifyWebApi({
 	clientId: "b67c1c5fd4b1477d8150f83961ff49bb",
 });
+
 
 const Dashboard = ({ code }) => {
 	const accessToken = useAuth(code);
@@ -26,19 +28,36 @@ const Dashboard = ({ code }) => {
 	}, [accessToken]);
 
 	return (
-		<div className="get-playlist">
-			<h1>
-				You successfully logged in! Now copy and paste the link of the spotify
-				playlist and we'll copy it into your library.
-			</h1>
-			<UrlForm spotifyApi={spotifyApi} />
-			<h2>
-				Or if you want to make a newplaylist based of another playlist then paste the link here:
-			</h2>
-			<UrlForm2 spotifyApi={spotifyApi} />
+		[	
+		<head>
+			<title> MusiMover </title>
+		</head>,
+		<div className="header">
+			MusiMover
+		</div>,
+		<div class = "navbar">
+			<a href = "./">Login</a>
+		</div>,
+		<body>
+		<div className = "get-playlist">
+			<h1>You have successfully logged in, choose an option below</h1>
+			<UrlForm spotifyApi={spotifyApi}/>
+			<UrlForm2 spotifyApi={spotifyApi}/>
 		</div>
-		
-	);
+		</body>
+		]
+
+	)
+	
+
 };
 
-export default Dashboard;
+
+
+// const express = require('express');
+// const app = new express;
+
+// app.get('/', function(request, response) {
+// 	response.sendFile('base-page.html');
+// });
+export default Dashboard

@@ -1,11 +1,14 @@
 import { useState } from "react";
 import Success2 from "./components/Success2";
+import Dashboard from "./Dashboard";
+import { playlistUrl } from "./UrlForm";
 
 const initialFormData = Object.freeze({
     Playlist_URL: "",
-});
+  });
 
 const FooBarForm = ({ spotifyApi }) => {
+
     const [playlistUrl, setPlaylistUrl] = useState(initialFormData);
     const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -69,13 +72,10 @@ const FooBarForm = ({ spotifyApi }) => {
     if (isSubmitted) return <Success2 />;
 
     return (
-        <form>
-            <label>
-                Playlist URL
-                <input name="Playlist_URL" onChange={handleChange} />
-            </label>
-            <button onClick={handleSubmit}>Submit</button>
-        </form>
+    <form>   
+    <input className = "input" id = "url" name="Playlist_URL" onChange={handleChange} />  
+    <button className="btn-group" onClick={handleSubmit}>Get A New Playlist based on an old one:</button>
+    </form>
     );
 };
 

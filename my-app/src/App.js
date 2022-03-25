@@ -9,7 +9,7 @@ const code = new URLSearchParams(window.location.search).get('code')
 
 function App() {
   return (
-    <div classname = "app">
+    <div className = "app">
          {code ? <Dashboard code={code} /> : <Login />}
     </div>
   );

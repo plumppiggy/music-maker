@@ -1,5 +1,8 @@
 import { useState } from "react";
 import Success from "./components/Success";
+import Dashboard from "./Dashboard";
+import "./Dashboard.css";
+
 
 const initialFormData = Object.freeze({
   Playlist_URL: "",
@@ -55,13 +58,11 @@ const FooBarForm = ({ spotifyApi }) => {
 
   return (
     <form>
-      <label>
-        Playlist URL
-        <input name="Playlist_URL" onChange={handleChange} />
-      </label>
-      <button onClick={handleSubmit}>Submit</button>
+      <input className = "input" id = "url" name="Playlist_URL" onChange={handleChange} />
+      <button className="btn-group" onClick={handleSubmit}>Copy the Playlist</button>
     </form>
   );
 };
+
 
 export default FooBarForm;
