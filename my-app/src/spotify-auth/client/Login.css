@@ -1,0 +1,16 @@
+.title-page{
+    padding-top: 5vh;
+    font-size: 300%;
+
+}
+
+.App-logo {
+    width: 50vmin;
+    height: 50vmin;
+    pointer-events: none;
+}
+
+.edit-text{
+    margin: 0;  
+}
+

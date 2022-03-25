@@ -1,0 +1,16 @@
+<svg width="184" height="184" viewBox="0 0 184 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="184" height="184" fill="white"/>
+<rect width="184" height="184" fill="#B19DFF"/>
+<g style="mix-blend-mode:soft-light">
+<path d="M85 132V18" stroke="#FF6868" stroke-width="24"/>
+</g>
+<g style="mix-blend-mode:soft-light">
+<ellipse cx="58" cy="132.5" rx="39" ry="33.5" fill="#F9B9B9"/>
+</g>
+<g style="mix-blend-mode:soft-light">
+<path d="M85.198 22C85.198 22 79.291 86.5626 132 85.9963" stroke="#FF6868" stroke-width="24"/>
+</g>
+<g style="mix-blend-mode:soft-light">
+<path d="M171 86L112.5 48.7609V123.239L171 86Z" fill="#662D2D"/>
+</g>
+</svg>
