@@ -3,6 +3,7 @@ import useAuth from "./spotify-auth/client/UseAuth";
 import SpotifyWebApi from "spotify-web-api-node";
 import "./Dashboard.css";
 import UrlForm from "./UrlForm";
+import UrlForm2 from "./UrlForm2.js";
 
 // Setting the spotifyApi, so that we can use it's functions
 const spotifyApi = new SpotifyWebApi({
@@ -28,10 +29,15 @@ const Dashboard = ({ code }) => {
 		<div className="get-playlist">
 			<h1>
 				You successfully logged in! Now copy and paste the link of the spotify
-				playlist you want and we'll put it into your library:
+				playlist and we'll copy it into your library.
 			</h1>
 			<UrlForm spotifyApi={spotifyApi} />
+			<h2>
+				Or if you want to make a newplaylist based of another playlist then paste the link here:
+			</h2>
+			<UrlForm2 spotifyApi={spotifyApi} />
 		</div>
+		
 	);
 };
 

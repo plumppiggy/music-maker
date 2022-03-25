@@ -25,8 +25,8 @@ const FooBarForm = ({ spotifyApi }) => {
 
     try {
       const createPlaylistRes = await spotifyApi.createPlaylist("Musi Mover Playlist", {
-        description: "My description",
-        public: true,
+        description: `Copied Playlist from ${playlistId}`,
+        public: false,
       });
 
       const myPlaylistId = createPlaylistRes.body.id;
@@ -38,12 +38,13 @@ const FooBarForm = ({ spotifyApi }) => {
 			const trackIds = tracks.map((trackObj) => trackObj.track.uri);
 			console.log({ trackIds });
 
-      // Add tracks to a playlist
       const addTracksRes = await spotifyApi.addTracksToPlaylist(
         myPlaylistId,
         trackIds
       );
       console.log({ addTracksRes });
+      
+
     } catch (error) {
       console.log(error);
     }
