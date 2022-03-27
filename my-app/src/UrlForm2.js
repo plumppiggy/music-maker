@@ -28,14 +28,22 @@ const FooBarForm = ({ spotifyApi }) => {
         // Create a private playlist
 
         try {
+
+            const name = await spotifyApi.getPlaylist(playlistId);
+            console.log({name});
+
+
             const createPlaylistRes = await spotifyApi.createPlaylist("Recommended Songs Playlist", {
-                description: `Playlist Similar to ${playlistUrl}`,
+                description: `Playlist Similar to ${name.body.name}`,
                 public: false,
             });
 
             const myPlaylistId = createPlaylistRes.body.id;
 
-            const tracksRes = await spotifyApi.getPlaylistTracks(`${playlistId}`);
+            const tracksRes = await spotifyApi.getPlaylistTracks(playlistId);
+            console.log({tracksRes});
+
+            
 
             const tracks = tracksRes.body.items;
             console.log({ tracks });

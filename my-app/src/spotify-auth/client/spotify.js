@@ -25,6 +25,7 @@ const scopes = [
   "user-read-recently-played",
   "user-follow-read",
   "user-follow-modify",
+  "ugc-image-upload",
 ];
 
 export const loginUrl = `${authEndpoint}?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scopes.join(

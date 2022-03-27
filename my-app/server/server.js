@@ -40,11 +40,8 @@ app.post("/login", (req, res) => {
     });
 });
 
-app.render("/base-page.html", (req, res) => {
-  if(err) console.log(err);
-  console.log(html);
-});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+

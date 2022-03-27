@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { ReactDOM } from 'react-dom';
-import { useState } from "react";
 import useAuth from "./spotify-auth/client/UseAuth";
 import SpotifyWebApi from "spotify-web-api-node";
 import "./Dashboard.css";
@@ -12,7 +10,6 @@ import UrlForm3 from "./Urlform3";
 const spotifyApi = new SpotifyWebApi({
 	clientId: "b67c1c5fd4b1477d8150f83961ff49bb",
 });
-
 
 const Dashboard = ({ code }) => {
 	const accessToken = useAuth(code);
@@ -61,12 +58,4 @@ const Dashboard = ({ code }) => {
 
 };
 
-
-
-// const express = require('express');
-// const app = new express;
-
-// app.get('/', function(request, response) {
-// 	response.sendFile('base-page.html');
-// });
 export default Dashboard
